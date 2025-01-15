@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portfolio Rizky Ramadhani</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+        .navbar {
+            background-color: #ff0505;
+        }
+        .navbar-brand {
+            font-weight: bold;
+            color: #ffffff;
+        }
+        .jumbotron {
+            background-color: #d0c0c0;
+            padding: 4rem 2rem;
+        }
+        .jumbotron img {
+            border-radius: 50%;
+            width: 150px;
+            margin-bottom: 1rem;
+        }
+        .jumbotron h1 {
+            font-weight: bold;
+        }
+        .card img {
+            border-radius: 10px;
+            border: 5px solid #ffffff;
+        }
+        .modal-body {
+            font-size: 1.1rem;
+        }
+        .footer {
+            background-color: #0d0d0d;
+            color: rgb(255, 255, 255);
+            padding: 1rem 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+   <!-- Navbar -->
+   <nav class="navbar navbar-expand-lg navbar-light shadow-sm">
+       <div class="container">
+           <a class="navbar-brand" href="#">RIZKY RAMADHANI</a>
+           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+           </button>
+           <div class="collapse navbar-collapse" id="navbarNav">
+               <ul class="navbar-nav ml-auto">
+                   <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+               </ul>
+           </div>
+       </div>
+   </nav>
+
+   <!-- Home Section -->
+   <section class="jumbotron text-center">
+       <img src="images/Foto Rizky.jpg" alt="Foto Rizky">
+       <h1 class="display-4">HELLO GUYS</h1>
+       <p class="lead">I'm Rizky Ramadhani, a student in Algorithm Programming.</p>
+       <p class="lead">Informatics Engineering, STIKOM Muhammadiyah Batam</p>
+   </section>
+
+   <!-- Projects Section -->
+   <section id="projects" class="container py-5">
+       <h1 class="text-center mb-5">My Projects</h1>
+       <div class="row">
+           <!-- Hello World Card -->
+           <div class="col-md-4">
+               <div class="card mb-4">
+                   <img src="images/Hello World.jpg" class="card-img-top" alt="Hello World">
+                   <div class="card-body">
+                       <h5 class="card-title">Hello World</h5>
+                       <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#helloWorldModal">TAMPILAN HELLO WORLD</button>
+                   </div>
+               </div>
+           </div>
+
+           <!-- Luas Persegi Panjang Card -->
+           <div class="col-md-4">
+            <div class="card mb-4">
+                   <img src="images/Persegi panjang.jpg" class="card-img-top" alt="Luas Persegi Panjang">
+                   <div class="card-body">
+                       <h5 class="card-title">Luas Persegi Panjang</h5>
+                       <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#luasPersegiModal">HITUNG LUAS</button>
+                   </div>
+               </div>
+           </div>
+
+           <!-- Segitiga Bintang Card -->
+           <div class="col-md-4">
+            <div class="card">
+                <div style="background-color: white; padding: 20px; text-align: center;">
+                    <img id="segitigabintangImage" src="images/Segitiga Bintang.jpg" class="card-img-top img-fluid" style="width: 100%; border: 5px solid #ddd; border-radius: 10px;"></div>
+                <div class="card-body">
+                    <h5 class="card-title">Segitiga Bintang</h5>
+                    <div class="form-group">
+                        <label for="rowInput">Masukan Jumlah Baris :</label>
+                        <input type="number" class="form-control" id="rowInput" min="1">
+                    </div>
+                    <button type="button" class="btn btn-primary" id="generateBtn">TAMPILAN SEGITIGA</button>
+                </div>
+            </div>
+        </div>
+
+           <!-- Kipas Angin Card -->
+           <div class="col-md-4">
+               <div class="card mb-4">
+                   <img id="fanImage" src="images/mati.png" class="card-img-top" alt="Kipas Mati">
+                   <div class="card-body">
+                       <h5 class="card-title">Kipas Angin</h5>
+                       <p class="card-text">Klik tombol untuk menghidupkan atau mematikan kipas angin</p>
+                       <button id="startButton" class="btn btn-primary">HIDUPKAN</button>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </section>
+
+            <!-- Database Mahasiswa -->
+            <div class="col-md-4">
+                <div class="card">
+                    <div style="background-color: white; padding: 20px; text-align: center;">
+                    <img id="databaseImage" src="images/Database.jpg" class="card-img-top img-fluid" style="width: 100%; border: 5px solid #ddd; border-radius: 10px;"></div>
+                    <div class="card-body">
+                        <h5 class="card-title">Database Mahasiswa</h5>
+                        <p class="card-text"> Tugas 15 Database Mahasiswa Ada Di Channel YouTube</p>
+                        <a href="https://youtu.be/79Px2lHeb74" target="_blank">Klik Di Sini Untuk Menonton Videonya</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Koreksi Lembar Jawaban --> 
+             <div class="col-md-4">
+                <div class="card">  
+                    <div style="background-color: white; padding: 20px; text-align: center;">
+                        <img id="koreksiImage" src="images/Ngoreksi Lembar Jawaban.jpg" class="card-img-top img-fluid" style="width: 100%; border: 5px solid #ddd; border-radius: 10px;"></div>
+                        <div class="card-body">
+                            <h5 class="card-title">Koreksi Lembar Jawaban</h5>
+                            <p class="card-text">Klik Tombol Untuk Mengkoreksi Jawaban</p>
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#KoreksiLembarJawabanModal">KOREKSI</button>
+                        </div>
+                    </div>
+                </div>
+             </div>
+
+   <!-- Footer -->
+   <footer class="footer">
+       <p>&copy; 2025 Rizky Ramadhani, All Rights Reserved.</p>
+   </footer>
+
+   <!-- Modals -->
+   <div class="modal fade" id="helloWorldModal" tabindex="-1" role="dialog" aria-labelledby="helloWorldModalLabel" aria-hidden="true">
+       <div class="modal-dialog" role="document">
+           <div class="modal-content">
+               <div class="modal-header">
+                   <h5 class="modal-title" id="helloWorldModalLabel">Hello World Project</h5>
+                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                       <span aria-hidden="true">&times;</span>
+                   </button>
+               </div>
+               <div class="modal-body">Hello World!</div>
+               <div class="modal-footer">
+                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+               </div>
+           </div>
+       </div>
+   </div>
+
+   <div class="modal fade" id="luasPersegiModal" tabindex="-1" role="dialog" aria-labelledby="luasPersegiLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header"><h5 class="modal-title">Luas Persegi Panjang</h5></div>
+            <div class="modal-body">
+                <p>Masukkan panjang dan lebar:</p>
+                <input type="number" id="panjang" placeholder="Panjang" class="form-control mb-2">
+                <input type="number" id="lebar" placeholder="Lebar" class="form-control mb-2">
+                <button class="btn btn-success" onclick="hitungLuas()">Hitung</button>
+                <div id="luasResult" class="mt-2"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="resultModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header"><h5>Hasil Segitiga Bintang</h5></div>
+            <div class="modal-body" id="resultContent"></div>
+        </div>
+    </div>
+</div>
+
+<!-- New YouTube Channel Modal -->
+<div class="modal fade" id="youtubeModal" tabindex="-1" role="dialog" aria-labelledby="youtubeModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="youtubeModalLabel">My YouTube Channel</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <iframe width="100%" height="315" src="https://youtu.be/79Px2lHeb74listType=user_uploads&list=rizkyramadhani-05" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <!-- Button to Open YouTube Channel Modal -->
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#youtubeModal">
+                View My YouTube Channel</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="KoreksiLembarJawabanModal" tabindex="-1" role="dialog" aria-labelledby="KoreksiLembarJawabanTable" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 style="text-align: center; color: #007bff;">Koreksi Lembar Jawaban</h1>
+            </div>
+            <div class="modal-body">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Jawaban Anda</th>
+                            <th>Jawaban Benar</th>
+                            <th>Hasil</th>
+                        </tr>
+                    </thead>
+                    <tbody id="answerTable">
+                        <!-- Rows will be added by JavaScript -->
+                    </tbody>
+                </table>
+                <button onclick="checkAnswers()">Koreksi Jawaban</button>
+                <p id="result"></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+   <!-- Script for Kipas Angin -->
+   <script>
+    function hitungLuas() {
+            const panjang = document.getElementById('panjang').value;
+            const lebar = document.getElementById('lebar').value;
+            document.getElementById('luasResult').innerText = `Luas: ${panjang * lebar}`;
+        }
+
+        document.getElementById('generateBtn').addEventListener('click', function() {
+            const rows = document.getElementById('rowInput').value;
+            let result = '';
+            for (let i = 1; i <= rows; i++) {
+                result += ' '.repeat(rows - i) + '* '.repeat(i) + '<br>';
+            }
+            document.getElementById('resultContent').innerHTML = result;
+            $('#resultModal').modal('show');
+        });
+
+       document.getElementById('startButton').addEventListener('click', function() {
+           const fan = document.getElementById('fanImage');
+           const button = document.getElementById('startButton');
+           if (fan.src.includes('mati')) {
+               fan.src = 'images/hidup.gif';
+               button.textContent = 'Matikan';
+               button.classList.remove('btn-primary');
+               button.classList.add('btn-danger');
+           } else {
+               fan.src = 'images/mati.png';
+               button.textContent = 'Hidupkan';
+               button.classList.remove('btn-danger');
+               button.classList.add('btn-primary');
+           }
+       });
+    
+    function checkAnswers() {
+        const answerTable = document.getElementById('answerTable');
+        answerTable.innerHTML = ''; // Clear previous results
+
+        const answers = [
+            { no: 1, yourAnswer: 'A', correctAnswer: 'B' },
+            { no: 2, yourAnswer: 'C', correctAnswer: 'C' },
+            { no: 3, yourAnswer: 'D', correctAnswer: 'A' }
+        ];
+
+        answers.forEach((answer, index) => {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${answer.no}</td>
+                <td>${answer.yourAnswer}</td>
+                <td>${answer.correctAnswer}</td>
+                <td class="${answer.yourAnswer === answer.correctAnswer ? 'correct' : 'incorrect'}">
+                    ${answer.yourAnswer === answer.correctAnswer ? 'Benar' : 'Salah'}
+                </td>
+            `;
+            answerTable.appendChild(row);
+        });
+
+        document.getElementById('result').innerText = 'Koreksi selesai!';
+    }
+
+    // Kunci jawaban benar
+    const correctAnswers = ['A', 'B', 'C', 'D', 'E', 'A', 'B', 'C', 'D', 'E', 'A', 'B', 'C', 'D', 'E', 'A', 'B', 'C', 'D', 'E'];
+
+    // Fungsi untuk membuat tabel jawaban
+    function createTable() {
+        const tableBody = document.getElementById('answerTable');
+        for (let i = 0; i < 20; i++) {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${i + 1}</td>
+                <td>
+                    <select id="answer${i}">
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                        <option value="D">D</option>
+                        <option value="E">E</option>
+                    </select>
+                </td>
+                <td>${correctAnswers[i]}</td>
+                <td id="result${i}">-</td>
+            `;
+            tableBody.appendChild(row);
+        }
+    }
+
+    // Fungsi untuk mengecek jawaban
+    function checkAnswers() {
+        let correctCount = 0;
+        let incorrectCount = 0;
+
+        for (let i = 0; i < 20; i++) {
+            const userAnswer = document.getElementById(`answer${i}`).value;
+            const resultCell = document.getElementById(`result${i}`);
+
+            if (userAnswer === correctAnswers[i]) {
+                resultCell.textContent = 'Benar';
+                resultCell.className = 'correct';
+                correctCount++;
+            } else {
+                resultCell.textContent = 'Salah';
+                resultCell.className = 'incorrect';
+                incorrectCount++;
+            }
+        }
+
+        document.getElementById('result').textContent = `Jawaban Benar: ${correctCount}, Jawaban Salah: ${incorrectCount}`;
+    }
+
+    // Buat tabel jawaban saat halaman dimuat
+    window.onload = createTable;
+</script>
+</body>
+</html>
